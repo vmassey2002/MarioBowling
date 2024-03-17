@@ -8,15 +8,15 @@ public class ArrowController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            float rotationAmount = Time.deltaTime * 30f;
+            float rotationAmount = 0.5f;
             transform.Rotate(Vector3.down, rotationAmount);
-            Debug.Log("Rotation amount: " + rotationAmount);
-
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(Vector3.up, Time.deltaTime * 30f);
+            float rotationAmount = 0.5f;
+            transform.Rotate(Vector3.up, rotationAmount);
+            //transform.Rotate(Vector3.up, Time.deltaTime * 30f);
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
