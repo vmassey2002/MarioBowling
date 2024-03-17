@@ -10,7 +10,6 @@ public class ArrowController : MonoBehaviour
         {
             float rotationAmount = Time.deltaTime * 30f;
             transform.Rotate(Vector3.down, rotationAmount);
-            Debug.Log("Rotation amount: " + rotationAmount);
 
         }
 
