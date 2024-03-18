@@ -116,14 +116,14 @@ public class Ball : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-     private void CalculatePinsDown()
+    private void CalculatePinsDown()
     {
         GameObject[] pins = GameObject.FindGameObjectsWithTag("Pin");
         int pinsDown = 0;
 
         foreach (var pin in pins)
         {
-            if (pin.transform.up.y < 0.1f)
+            if (Vector3.Angle(pin.transform.up, Vector3.up) < 30f)
             {
                 pinsDown++;
             }
@@ -134,15 +134,15 @@ public class Ball : MonoBehaviour
 
         // Use fallenPins value as you wish, e.g., updating the score.
     }
-
+    
     private void GenerateFeedBack()
     {
         feedBack.text = Point switch
         {
-            0 => "Nothing!",
+            0 => "You hit nothing lol!",
             > 0 and < 3 => "That was close!",
             >= 3 and < 6 => "That was close!",
-            >= 6 and < 10 => "Nice try!",
+            >= 6 and < 10 => "That was close!",
             _ => "STRIIIIIIKE"
         };
 
