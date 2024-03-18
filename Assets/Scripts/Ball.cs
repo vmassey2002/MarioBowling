@@ -38,7 +38,6 @@ public class Ball : MonoBehaviour
 
         _arrow = GameObject.FindGameObjectWithTag("Arrow").transform;
 
-        // get the reference to the Rigidbody component of the ball
         rb = GetComponent<Rigidbody>();
 
         _startPosition = transform;
@@ -83,7 +82,7 @@ public class Ball : MonoBehaviour
 
     }
 
-    private IEnumerator Shoot()
+    public IEnumerator Shoot()
     {
 
         _ballMoving = true;
