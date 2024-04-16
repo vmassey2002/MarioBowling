@@ -7,6 +7,9 @@ using System.Threading;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
+
+//hallooooo venecia
+
 public class ArrowController : MonoBehaviour
 {
     private Ball ballScript;
@@ -29,7 +32,7 @@ public class ArrowController : MonoBehaviour
         client.Connect("UnityClient");
         
         // Subscribe to MQTT topic
-        client.Subscribe(new string[] { "ece180da/test/arrow_control" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+        client.Subscribe(new string[] { "ece/180dw/shafee" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
     }
 
     void OnMessageReceived(object sender, MqttMsgPublishEventArgs e)
