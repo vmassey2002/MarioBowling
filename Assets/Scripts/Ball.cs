@@ -139,10 +139,10 @@ public class Ball : MonoBehaviour
     {
         feedBack.text = Point switch
         {
-            0 => "You hit nothing lol!",
-            > 0 and < 3 => "That was close!",
-            >= 3 and < 6 => "That was close!",
-            >= 6 and < 10 => "That was close!",
+            0 => "YOU SUCK!",
+            > 0 and < 3 => "Spare!",
+            >= 3 and < 6 => "Spare!",
+            >= 6 and < 10 => "Spare!",
             _ => "STRIIIIIIKE"
         };
 
